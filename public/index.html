@@ -53,10 +53,23 @@
 </head>
 <body>
 
-<h1>A title</h1>
+<div class='container'>
+    <video autoplay loop muted>
+        <source src='/assets/etc/ryan-amador-fireplace.mp4' type='video/mp4'/>
+        <source src='/assets/etc/ryan-amador-fireplace.webm' type='video/webm'/>
+    </video>
+
+    <div class='overlay'></div>
+
+    <div class='row foreground'>
+        <div class='color-wheel'></div>
+    </div>
+</div>
 
 <script src="/assets/vendor/jquery/dist/jquery.min.js"></script>
 <script src='/assets/vendor/bootstrap/dist/js/bootstrap.js'></script>
+<script src='/assets/vendor/raphael.js/raphael.min.js'></script>
+<script src='/assets/vendor/colorwheel/colorwheel.js'></script>
 <script src='/assets/js/main.js'></script>
 </body>
 </html>
