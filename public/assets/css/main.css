@@ -1,3 +1,69 @@
+@-webkit-keyframes spin {
+    from {
+        -webkit-transform: rotate(0deg);
+    }
+    to {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+@-webkit-keyframes rotate1 {
+    from {
+        -webkit-transform: rotate(0deg);
+    }
+    to {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+@-moz-keyframes rotate1 {
+    from {
+        -moz-transform: rotate(0deg);
+    }
+    to {
+        -moz-transform: rotate(360deg);
+    }
+}
+
+@-moz-keyframes spin {
+    from {
+        -moz-transform: rotate(0deg);
+    }
+    to {
+        -moz-transform: rotate(360deg);
+    }
+}
+
+@-ms-keyframes spin {
+    from {
+        -ms-transform: rotate(0deg);
+    }
+    to {
+        -ms-transform: rotate(360deg);
+    }
+}
+
+.input-group .form-control:first-child,
+.input-group-addon:first-child,
+.input-group-btn:first-child > .btn,
+.input-group-btn:first-child > .btn-group > .btn,
+.input-group-btn:first-child > .dropdown-toggle,
+.input-group-btn:last-child > .btn:not(:last-child):not(.dropdown-toggle),
+.input-group-btn:last-child > .btn-group:not(:last-child) > .btn,
+.input-group .form-control:last-child,
+.input-group-addon:last-child,
+.input-group-btn:last-child > .btn,
+.input-group-btn:last-child > .btn-group > .btn,
+.input-group-btn:last-child > .dropdown-toggle,
+.input-group-btn:first-child > .btn:not(:first-child),
+.input-group-btn:first-child > .btn-group:not(:first-child) > .btn {
+    border-radius: 0;
+}
+
+* {
+    font-family: 'Bubblegum Sans', cursive;
+}
+
 html,
 body {
     position: relative;
@@ -12,6 +78,12 @@ body {
     width: 100%;
     height: 100vh;
     z-index: 0;
+    overflow: hidden;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
 }
 
 video {
@@ -28,32 +100,6 @@ video {
     width: auto;
     height: auto;
     z-index: -100;
-    /*
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    margin-left: -50%;
-    margin-top: -50%;
-    width: 100%;
-    max-width: 100%;
-    min-width: 100%;
-    height: auto;
-    */
-    /*
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    min-width: 100%;
-    min-height: 100%;
-    width: auto;
-    height: auto;
-    z-index: 1;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: 50% 50%;
-    background: url(/assets/img/bg-hero.jpg);
-    background-size: cover;
-    */
 }
 
 .overlay {
@@ -69,18 +115,212 @@ video {
 }
 
 .foreground {
+    position: relative;
+    margin: 0 auto;
+    z-index: 5;
+    -ms-flex-order: 1;
+    -webkit-order: 1;
+    order: 1;
+    -ms-flex-item-align: center;
+    -webkit-align-self: center;
+    align-self: center;
+}
+
+.sunburst {
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    position: absolute;
+    overflow: hidden;
+}
+
+.sunburst .outer {
     position: absolute;
     left: 0;
     right: 0;
     top: 0;
     bottom: 0;
-    z-index: 5;
+    padding-top: 55vh;
+    -webkit-animation-name: rotate1;
+    -webkit-animation-duration: 30s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+    -moz-animation-name: rotate1;
+    -moz-animation-duration: 30s;
+    -moz-animation-iteration-count: infinite;
+    -moz-animation-timing-function: linear;
+}
+
+.sunburst b {
+    display: block;
+    width: 0;
+    height: 0;
+    border-width: 80px 60vw;
+    margin: -160px 0 0 -10vw;
+    border-color: transparent black;
+    border-style: solid;
+}
+
+.sunburst b:nth-child(1) {
+    -webkit-transform: rotate(20deg);
+    -moz-transform: rotate(20deg);
+}
+
+.sunburst b:nth-child(2) {
+    -webkit-transform: rotate(40deg);
+    -moz-transform: rotate(40deg);
+}
+
+.sunburst b:nth-child(3) {
+    -webkit-transform: rotate(60deg);
+    -moz-transform: rotate(60deg);
+}
+
+.sunburst b:nth-child(4) {
+    -webkit-transform: rotate(80deg);
+    -moz-transform: rotate(80deg);
+}
+
+.sunburst b:nth-child(5) {
+    -webkit-transform: rotate(100deg);
+    -moz-transform: rotate(100deg);
+}
+
+.sunburst b:nth-child(6) {
+    -webkit-transform: rotate(120deg);
+    -moz-transform: rotate(120deg);
+}
+
+.sunburst b:nth-child(7) {
+    -webkit-transform: rotate(140deg);
+    -moz-transform: rotate(140deg);
+}
+
+.sunburst b:nth-child(8) {
+    -webkit-transform: rotate(160deg);
+    -moz-transform: rotate(160deg);
+}
+
+.sunburst b:nth-child(9) {
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+}
+
+h1 {
+    text-align: center;
+    color: #FFFFFF;
+    font-size: 40px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    text-shadow: 4px 4px 2px rgba(150, 150, 150, 1);
+}
+
+h1 em {
+    font-size: 150%;
 }
 
 .color-wheel {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    margin-top: -250px;
-    margin-left: -250px;
+    display: block;
+    margin: 0 auto;
+}
+
+.color-wheel.small {
+    display: none;
+}
+
+.email-input {
+    width: 400px;
+    display: block;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+
+.email-input p {
+    text-align: center;
+    color: #FFFFFF;
+    font-size: 18pt;
+}
+
+.email-input input,
+.email-input button {
+    height: 40px;
+}
+
+.website {
+    width: 300px;
+    margin: 0 auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: block;
+    text-align: center;
+}
+
+.website a {
+    font-size: 14pt;
+    color: #FFFFFF;
+}
+
+.social {
+    width: 80px;
+    margin: 0 auto;
+    display: block;
+}
+
+.social img {
+    display: inline-block;
+}
+
+.img-facebook {
+    width: 14px;
+    margin-right: 40px;
+}
+
+.img-twitter {
+    width: 20px;
+}
+
+@media screen and (max-aspect-ratio: 1/1) {
+    .sunburst .outer {
+        padding-top: 60vh;
+    }
+
+    .sunburst b {
+        border-width: 80px 80vh;
+        margin: -160px 0 0 -30vh;
+    }
+}
+
+@media (max-width: 768px), (max-height: 600px) {
+    .color-wheel.large {
+        display: none;
+    }
+
+    .color-wheel.small {
+        display: block;
+    }
+
+    .sunburst b {
+        border-width: 40px 80vh;
+        margin: -80px 0 0 -30vh;
+    }
+
+    h1 {
+        font-size: 26px;
+    }
+
+    .email-input p {
+        font-size: 12pt;
+    }
+}
+
+@media (max-width: 420px) {
+    .email-input {
+        width: auto;
+    }
+
+    .email-input input,
+    .email-input button {
+        height: 34px;
+    }
 }

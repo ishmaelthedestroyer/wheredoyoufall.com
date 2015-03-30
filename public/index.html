@@ -30,6 +30,8 @@
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
     -->
 
+    <link href='http://fonts.googleapis.com/css?family=Bubblegum+Sans' rel='stylesheet' type='text/css'>
+
     <!-- vendor CSS -->
     <link rel="stylesheet" type="text/css" href="/assets/vendor/bootstrap/dist/css/bootstrap.css"/>
 
@@ -61,12 +63,61 @@
 
     <div class='overlay'></div>
 
+    <div class="sunburst">
+        <div class="outer">
+            <b></b>
+            <b></b>
+            <b></b>
+            <b></b>
+            <b></b>
+            <b></b>
+            <b></b>
+            <b></b>
+            <b></b>
+            <b></b>
+        </div>
+    </div>
+
     <div class='row foreground'>
-        <div class='color-wheel'></div>
+        <h1>
+            Where do<em>you</em> fall on the spectrum?
+        </h1>
+
+        <div class='color-wheel large'></div>
+        <div class='color-wheel small'></div>
+
+        <div class='email-input'>
+            <form id='form-email'>
+                <div class='form-group'>
+                    <p>Enter your email to download the new track!</p>
+                </div>
+                <div class='input-group'>
+                    <input type='text' class='form-control'>
+                    <span class='input-group-btn'>
+                        <button class='btn btn-primary' type='button'>Go!</button>
+                    </span>
+                </div>
+            </form>
+        </div>
+
+        <!--
+        <div class='rays'></div>
+        -->
+
+        <div class='website'>
+            <a href='#'>
+                http://ryanamador.com
+            </a>
+        </div>
+
+        <div class='social'>
+            <img class='img-facebook' src='/assets/img/footer-facebook-icon.png'/>
+            <img class='img-twitter' src='/assets/img/footer-twitter-icon.png'/>
+        </div>
     </div>
 </div>
 
-<script src="/assets/vendor/jquery/dist/jquery.min.js"></script>
+<script src='/assets/vendor/jquery/dist/jquery.min.js'></script>
 <script src='/assets/vendor/bootstrap/dist/js/bootstrap.js'></script>
 <script src='/assets/vendor/raphael.js/raphael.min.js'></script>
 <script src='/assets/vendor/colorwheel/colorwheel.js'></script>
