@@ -1,0 +1,25 @@
+{
+  "name": "wheredoyoufall.com",
+  "version": "0.0.0",
+  "description": "Ryan Amador's wheredoyoufall.com",
+  "main": "app.js",
+  "dependencies": {
+    "body-parser": "^1.12.2",
+    "method-override": "^2.3.2",
+    "express": "^4.12.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ishmaelthedestroyer/wheredoyoufall.com.git"
+  },
+  "author": "ishmaelthedestroyer <ishmaelthedestroyer@gmail.com> (http://ishmaelthedestroyer.com/)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ishmaelthedestroyer/wheredoyoufall.com/issues"
+  },
+  "homepage": "https://github.com/ishmaelthedestroyer/wheredoyoufall.com"
+}
