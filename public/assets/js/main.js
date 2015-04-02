@@ -4,14 +4,25 @@ $(document).ready(function() {
     $bg = $('.bg'),
     $div,
     baseUrl = '/assets/img/stills/',
-    imgExtension = '.jpg';
+    numPhotos = 21;
 
   while (++i < 50) {
     $div = $('<div></div>');
-    // $div.css({ 'background-image': baseUrl + 1 + imgExtension });
-    $div.css({ 'background-image': 'url(' + baseUrl + getRandomInt(1, 20) + '.jpg)' });
+    $div.css({ 'background-image': 'url(' + baseUrl + getRandomInt(1, numPhotos) + '.jpg)' });
     $bg.append($div);
   }
+
+  // change random photo periodically
+  setInterval(function() {
+    var
+      $photo = $bg.find('div:nth-child(' + getRandomInt(1, numPhotos) + ')'),
+      newImg = baseUrl + getRandomInt(1, numPhotos) + '.jpg';
+
+    $photo.animate({ opacity: 0.2 }, 750, function() {
+      $photo.css({ 'background-image': 'url(' + newImg + ')' });
+      $photo.animate({ opacity: 1 }, 500);
+    });
+  }, 1000);
 
   /**
    * Returns a random integer between min (inclusive) and max (inclusive)
