@@ -162,3 +162,14 @@ p a:hover {
         font-size: 26px;
     }
 }
+
+@media (max-width: 500px), (max-height: 500px) {
+    .container {
+        height: auto;
+        min-height: 100%;
+    }
+
+    .foreground {
+        position: relative;
+    }
+}
