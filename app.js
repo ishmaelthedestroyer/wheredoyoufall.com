@@ -48,7 +48,7 @@ app.get('*', function(req, res) {
 });
 
 /** take requests on specified port */
-app.listen(port);
+app.listen(port, '0.0.0.0');
 console.log('Server listening on port ' + port + '.');
 
 /** expose app */

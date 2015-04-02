@@ -100,6 +100,10 @@ body {
     height: 20%;
 }
 
+.foreground .top p {
+    margin: 40px 0;
+}
+
 .foreground .bottom {
     height: 45%;
 }
@@ -161,9 +165,18 @@ p a:hover {
     h1 {
         font-size: 26px;
     }
+
+    .foreground .top,
+    .foreground .bottom {
+        height: auto;
+    }
+
+    .foreground .top p {
+        margin: 20px 0;
+    }
 }
 
-@media (max-width: 500px), (max-height: 500px) {
+@media (max-width: 320px), (max-height: 500px) {
     .container {
         height: auto;
         min-height: 100%;
