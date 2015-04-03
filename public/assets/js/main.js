@@ -6,7 +6,7 @@ $(document).ready(function() {
     baseUrl = '/assets/img/stills/',
     numPhotos = 21;
 
-  while (++i < 50) {
+  while (++i < 100) {
     $div = $('<div></div>');
     $div.css({ 'background-image': 'url(' + baseUrl + getRandomInt(1, numPhotos) + '.jpg)' });
     $bg.append($div);
