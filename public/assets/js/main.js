@@ -165,7 +165,7 @@ $(document).ready(function() {
         photos.splice(0, 1);
       }
 
-      photos.push(newImages[i]);
+      photos.push(newImages[i - 1]);
     }
 
     // reset images with `createTiles`
