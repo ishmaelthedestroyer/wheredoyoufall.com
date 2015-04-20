@@ -85,7 +85,7 @@ app.get('*', function(req, res) {
 
 nconf.argv().env();
 
-port = nconf.get('port') || 8080;
+port = process.env.PORT || nconf.get('port') || 8080;
 t = new Twit({
   consumer_key: nconf.get('TWITTER_CONSUMER_KEY'),
   consumer_secret: nconf.get('TWITTER_CONSUMER_SECRET'),
