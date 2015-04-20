@@ -54,12 +54,12 @@ $(document).ready(function() {
 
     $.each($bg.children(), function(index, tile) {
       $(tile).remove();
-    })
+    });
 
     i = 0;
     var
       tileSize = 200,
-      smallerTile = tileSize - 40,
+      smallerTile = tileSize - 54,
       numTiles = (windowWidth * windowHeight) / (smallerTile * smallerTile);
 
     while (++i < Math.ceil(numTiles)) {
@@ -101,9 +101,8 @@ $(document).ready(function() {
    */
   function parseImagesFromTweets(tweets) {
     var queue = [];
-    var l = 0;
+
     $.each(tweets, function(index, tweet) {
-      ++l;
       if (!tweet || !tweet.entities || !tweet.entities.media || !(tweet.entities.media instanceof Array)) {
         return;
       }
