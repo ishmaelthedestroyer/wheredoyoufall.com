@@ -103,13 +103,11 @@ $(document).ready(function() {
     var queue = [];
 
     $.each(tweets, function(index, tweet) {
-      if (!tweet || !tweet.entities || !tweet.entities.media || !(tweet.entities.media instanceof Array)) {
+      if (!tweet || !tweet.photoUrl) {
         return;
       }
 
-      $.each(tweet.entities.media, function(index, media) {
-        queue.push(media.media_url);
-      });
+      queue.push(tweet.photoUrl);
     });
 
     return queue;
@@ -151,7 +149,7 @@ $(document).ready(function() {
   loadTweets(function(data) { // on success callback
     var
     // parse images from the tweets
-      newImages = parseImagesFromTweets(data.statuses),
+      newImages = parseImagesFromTweets(data),
 
     // get the number of default photos
       numDefaultImages = photos.length;
